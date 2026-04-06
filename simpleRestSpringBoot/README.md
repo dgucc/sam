@@ -1,0 +1,42 @@
+# Compiler le projet
+`mvn clean compile`  
+
+# Lancer le serveur spring-boot
+`mvn spring-boot:run`  
+
+ou préciser la class main  
+`mvn exec:java -Dexec.mainClass=com.example.demo.DemoApplication`  
+
+ou en une seule ligne  
+`mvn clean compile spring-boot:run`  
+
+
+# Dans le browser 
+
+Pour obtenir la liste des universités, URL : http://localhost:8080/universities  
+```json
+[
+  {
+    "name": "Faculté universitaire de Namur"
+  },
+  {
+    "name": "Université catholique de Louvain"
+  },
+  {
+    "name": "Université libre de Bruxelles"
+  }
+]
+```
+
+ou à partir d'une commande curl :   
+`curl --silent http://localhost:8080/universities`  
+
+
+ou à partir d'une page web (javascript) :  
+demo/index.html
+
+
+---
+
+# Liens utiles
+https://commons.wikimedia.org/wiki/Category:Logos_of_universities_and_colleges_in_Belgium

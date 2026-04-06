@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Appel d'un API REST avec javascript</h1>
+
+    <button onclick="fetchAPI()">Charger les données</button>
+    <div id="resultat"></div>
+
+    <script>
+        function fetchAPI() {
+            // L'URL du service REST à interroger
+            fetch('http://localhost:8080/universities')
+                .then(response => response.json()) // Convertir la réponse en JSON
+                .then(data => {
+                    // Afficher les universités
+                    document.getElementById('resultat').innerHTML = JSON.stringify(data);
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('Erreur :', error);
+                });
+                // F12 dans le browser > "Console" pour afficher plus de détails
+        }
+    </script>
+</body>
+</html>
