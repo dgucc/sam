@@ -1,7 +1,9 @@
 Pour démarrer hsqldb : 
 
+# En mode Server
 $ java -cp hsqldb-2.7.4.jar org.hsqldb.server.Server --database.0 file:demo --dbname.0 demo
 
-
+# En mode Database GUI Manager
+$ java -cp hsqldb-2.7.4.jar org.hsqldb.util.DatabaseManagerSwing --url jdbc:hsqldb:file:demo;hsqldb.lock_file=false
 
 
