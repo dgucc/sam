@@ -40,6 +40,17 @@ public class UniversityController {
     }
 
 
+    @PostMapping("/universities")
+    public ResponseEntity<?> addUniversity(@RequestBody University university) {
+        // service.addUniversity(university);
+        try {
+            return new ResponseEntity<University>(service.addUniversity(university), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+
     @GetMapping("/universities")
     public ResponseEntity<?> getListOfUniversities() {
        try {
