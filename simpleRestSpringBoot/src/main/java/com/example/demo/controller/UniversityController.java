@@ -5,18 +5,31 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.University;
 import com.example.demo.service.UniversityService;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UniversityController {
 
     @Autowired
     private UniversityService service;
     
+
+    @PostMapping("/universities")
+    public ResponseEntity<?> addUniversity(@RequestBody University university) {
+        // service.addUniversity(university);
+        try {
+            return new ResponseEntity<University>(service.addUniversity(university), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 
     @GetMapping("/universities")
     public ResponseEntity<?> getListOfUniversities() {

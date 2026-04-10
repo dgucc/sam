@@ -13,7 +13,14 @@ public class UniversityService {
     @Autowired
     private UniversityRepository repository;
 
-    public List<University> getListOfUniversities() {
-        return repository.getListOfUniversities();
+    public University addUniversity(University university){
+        return repository.save(university);
     }
+
+    public List<University> getListOfUniversities() {
+        // return repository.getListOfUniversities();
+        return repository.findAll();
+    }
+
+    
 }
