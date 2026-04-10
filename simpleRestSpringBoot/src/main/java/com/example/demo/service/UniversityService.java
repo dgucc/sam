@@ -17,9 +17,16 @@ public class UniversityService {
         return repository.save(university);
     }
 
+    public University addUniversity(University university){
+        return repository.save(university);
+    }
+
     public List<University> getListOfUniversities() {
+        // return repository.getListOfUniversities();
         return repository.findAll();
     }
+
+    
 
     
 }

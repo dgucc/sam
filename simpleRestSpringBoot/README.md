@@ -76,5 +76,11 @@ $ ollama launch claude --model qwen2.5:3b
 
 ---
 
+# TODO
+
+curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Unif de Waremme"}' http://localhost:8080/universities
+
+---
+
 # Liens utiles
 https://commons.wikimedia.org/wiki/Category:Logos_of_universities_and_colleges_in_Belgium
