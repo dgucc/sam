@@ -33,11 +33,34 @@ ou à partir d'une commande curl :
 
 
 ou à partir d'une page web (javascript) :  
-demo/index.html
+src/main/resources/static/index.html
 
 
 # Add University
 curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Unif de Waremme", "logo":"logo/no-logo"}' http://localhost:8080/universities
+
+# MySQL
+
+pom.xml:  
+```xml
+<!-- MySQL -->
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+</dependency>
+``` 
+
+application.properties:  
+``` 
+# MySQL Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/demo
+spring.datasource.username=root
+spring.datasource.password=admin
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+``` 
+
 
 ---
 
