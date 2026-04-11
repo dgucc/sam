@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 public class University {
    
     
-    public University(Long id, String name) {
+    public University(Long id, String name, String logo) {
         this.id = id;
         this.name = name;
     }
@@ -32,6 +32,9 @@ public class University {
     @Column
     private String name;
 
+    @Column
+    private String logo;
+
     
     public Long getId() {
         return id;
@@ -49,10 +52,18 @@ public class University {
         this.name = name;
     }
 
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
     
     @Override
     public String toString() {
         return "University [id=" + id + ", name=" + name + "]";
     }
+
     
 }
