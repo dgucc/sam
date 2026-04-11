@@ -2,6 +2,7 @@ temp/
 HELP.md
 target/
 log/
+archive/*
 
 data/demo.log
 data/demo.properties
@@ -38,3 +39,4 @@ build/
 
 ### VS Code ###
 .vscode/
+**/.vscode/
