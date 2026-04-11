@@ -36,11 +36,14 @@ ou à partir d'une page web (javascript) :
 demo/index.html
 
 
+# Add University
+curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Unif de Waremme", "logo":"logo/no-logo"}' http://localhost:8080/universities
+
 ---
 
 # TODO
 
-curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Unif de Waremme"}' http://localhost:8080/universities
+MySQL config
 
 ---
 
