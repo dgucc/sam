@@ -22,7 +22,6 @@ public class UniversityService {
     }
 
     public List<University> getListOfUniversities() {
-        // return repository.getListOfUniversities();
         return repository.findAll();
     }
 

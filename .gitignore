@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 archive/
 .vscode/
 =======
 archive/simpleRestSpringBoot.zip
 >>>>>>> 59ef15c (move static web page + cleaned out  DemoApplication)
+=======
+archive/
+.vscode/
+>>>>>>> 6e6172c (use variable defined in application.properties)

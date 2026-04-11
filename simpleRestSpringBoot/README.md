@@ -80,6 +80,12 @@ $ ollama launch claude --model qwen2.5:3b
 
 MySQL config
 
+
+---
+# Claude Code Ollama
+
+$ ollama launch claude --model qwen2.5:3b
+
 ---
 
 # Liens utiles

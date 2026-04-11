@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -26,16 +27,6 @@ public class UniversityController {
     @GetMapping("/hello")
     public ResponseEntity<String> hello(){
         return new ResponseEntity<>(hello, HttpStatus.OK);
-    }
-
-
-    @PostMapping("/universities")
-    public ResponseEntity<?> addUniversity(@RequestBody University university) {
-        try {
-            return new ResponseEntity<University>(service.addUniversity(university), HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
     }
 
 
