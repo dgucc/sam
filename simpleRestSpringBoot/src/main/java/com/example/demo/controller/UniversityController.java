@@ -21,24 +21,6 @@ public class UniversityController {
     @Autowired
     private UniversityService service;
     
-    @Value("${message.hello}")
-    private String hello;
-
-    @GetMapping("/hello")
-    public ResponseEntity<String> hello(){
-        return new ResponseEntity<>(hello, HttpStatus.OK);
-    }
-
-
-    @PostMapping("/universities")
-    public ResponseEntity<?> addUniversity(@RequestBody University university) {
-        try {
-            return new ResponseEntity<University>(service.addUniversity(university), HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
 
     @PostMapping("/universities")
     public ResponseEntity<?> addUniversity(@RequestBody University university) {
