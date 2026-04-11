@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("/")
 public class DemoApplication {
 
 
