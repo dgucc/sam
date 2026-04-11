@@ -7,6 +7,7 @@ archive/*
 data/demo.log
 data/demo.properties
 data/demo.tmp/
+data/demo.script
 
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
