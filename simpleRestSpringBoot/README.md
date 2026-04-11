@@ -45,6 +45,12 @@ curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Unif de Wa
 
 MySQL config
 
+
+---
+# Claude Code Ollama
+
+$ ollama launch claude --model qwen2.5:3b
+
 ---
 
 # Liens utiles
