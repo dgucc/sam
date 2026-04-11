@@ -4,7 +4,9 @@
     <h1>Appel d'un API REST avec javascript</h1>
 
     <button onclick="fetchAPI()">Charger les données</button>
-    <div id="resultat"></div>
+    <div>
+        <pre id="json-data"></pre>
+    </div>
 
     <script>
         function fetchAPI() {
@@ -13,7 +15,7 @@
                 .then(response => response.json()) // Convertir la réponse en JSON
                 .then(data => {
                     // Afficher les universités
-                    document.getElementById('resultat').innerHTML = JSON.stringify(data);
+                    document.getElementById('json-data').innerHTML = JSON.stringify(data,null,3);
                     console.log(data);
                 })
                 .catch(error => {
