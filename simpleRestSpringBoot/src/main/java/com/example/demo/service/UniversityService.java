@@ -17,6 +17,10 @@ public class UniversityService {
         return repository.save(university);
     }
 
+    public void deleteUniversity(Long id){
+        repository.deleteById(id);
+    }
+
     public List<University> getListOfUniversities() {
         return repository.findAll();
     }
