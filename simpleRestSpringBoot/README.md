@@ -37,7 +37,10 @@ src/main/resources/static/index.html
 
 
 # Add University
-curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Unif de Waremme", "logo":"logo/no-logo"}' http://localhost:8080/universities
+curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Université de Waremme", "logo":"logo/no-logo"}' http://localhost:8080/universities
+
+# Delete University
+curl --silent -X DELETE http://localhost:8080/universities/6
 
 # MySQL
 
