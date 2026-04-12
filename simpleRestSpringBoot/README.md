@@ -41,10 +41,6 @@ curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Universit√
 
 # Delete University
 curl --silent -X DELETE http://localhost:8080/universities/6
-curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Universit√© de Waremme", "logo":"logo/no-logo"}' http://localhost:8080/universities
-
-# Delete University
-curl --silent -X DELETE http://localhost:8080/universities/6
 
 # MySQL
 
@@ -63,6 +59,7 @@ application.properties:
 spring.datasource.url=jdbc:mysql://localhost:3306/demo
 spring.datasource.username=root
 spring.datasource.password=admin
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=validate
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true

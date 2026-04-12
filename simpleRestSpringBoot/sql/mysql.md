@@ -154,6 +154,7 @@ application.properties :
 spring.datasource.url=jdbc:mysql://localhost:3306/demo
 spring.datasource.username=root
 spring.datasource.password=admin
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=validate
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
