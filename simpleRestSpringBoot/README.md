@@ -41,6 +41,10 @@ curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Universit√
 
 # Delete University
 curl --silent -X DELETE http://localhost:8080/universities/6
+curl --silent -H "Content-Type: application/json" -X POST -d'{"name":"Universit√© de Waremme", "logo":"logo/no-logo"}' http://localhost:8080/universities
+
+# Delete University
+curl --silent -X DELETE http://localhost:8080/universities/6
 
 # MySQL
 
