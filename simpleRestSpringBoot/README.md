@@ -66,19 +66,14 @@ spring.jpa.properties.hibernate.format_sql=true
 
 # TODO
 
-MySQL config
-
+- login
 
 ---
 # Claude Code Ollama
 
 $ ollama launch claude --model qwen2.5:3b
 
----
 
-# TODO
-
-MySQL config
 
 ---
 
