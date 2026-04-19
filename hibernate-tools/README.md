@@ -39,6 +39,11 @@
             <artifactId>db2jcc</artifactId>
             <version>db2jcc4</version>
         </dependency>
+         <!-- MySQL -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+        </dependency>
 
     </dependencies>
 
@@ -48,10 +53,17 @@
 
 src/main/resources/hibernate.properties :  
 ```
-
+# MySQL Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/demo
+spring.datasource.username=root
+spring.datasource.password=admin
+spring.jpa.hibernate.ddl-auto=validate
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.format_sql=true
 ```
 
-3. Generate Java classes from DB2 
+3. Generate Java classes from DB
 
 `$ mvn org.hibernate.tool:hibernate-tools-maven:7.3.0.Final:hbm2java` 
 
