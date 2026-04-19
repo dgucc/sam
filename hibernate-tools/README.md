@@ -54,13 +54,13 @@
 src/main/resources/hibernate.properties :  
 ```
 # MySQL Configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/demo
-spring.datasource.username=root
-spring.datasource.password=admin
-spring.jpa.hibernate.ddl-auto=validate
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.jpa.show-sql=false
-spring.jpa.properties.hibernate.format_sql=true
+hibernate.connection.driver_class=hibernate.connection.url=
+hibernate.dialect=org.hibernate.dialect.DB2Dialect
+hibernate.connection.username=ROOT
+hibernate.connection.password=PWD
+hibernate.default_schema=
+hibernate.default_catalog=
+hibernate.connection.autocommit=true
 ```
 
 3. Generate Java classes from DB
