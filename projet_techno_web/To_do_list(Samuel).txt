@@ -1,0 +1,28 @@
+HOME PAGE
+=========
+- Modifier l'url des boutons rajouter avec js pour que celles-ci correspondent au query parameters nécessaire
+au back end pour identifier la faculté que l'utilisateur souhaite voir.
+
+
+
+FAVORITE PAGE
+=============
+- Modifier l'url des boutons rajouter avec js pour que celles-ci correspondent au query parameters nécessaire
+au back end pour identifier la synthèse/cours que l'utilisateur souhaite voir.
+
+
+
+MY SYNTH PAGE
+=============  
+- Modifier l'url des boutons rajouter avec js pour que celles-ci correspondent au query parameters nécessaire
+au back end pour identifier la synthèses que l'utilisateur souhaite voir.
+
+
+===============
+    GLOBAL
+===============
+- Implémenter la base de donnée pour pouvoir éviter de hard-coder les données dans les Services
+
+- Pourquoi implémenter un id automatiquement ajouté par la base de donnée alors qu'il y a déjà un identifiant métier (ex:nom_faculté) ?
+=> La raison est que, dans le cas où des bases de données seraient amenées à fusionner, il est alors possible que l'unicité de
+    l'attribut ne soit plus valide (si deux universités décident de fusionner leur bdd et que les deux ont une faculté d'informatique).

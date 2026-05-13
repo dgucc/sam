@@ -1,0 +1,39 @@
+<configuration>
+
+    <!-- Console appender -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Rolling File Appender -->
+    <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/app.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- Nom du fichier de log après rotation -->
+            <FileNamePattern>log/app-%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+            <!-- Taille du fichier avant rotation -->
+            <maxFileSize>10MB</maxFileSize>
+            <!-- Nombre maximum de fichiers -->
+            <maxHistory>3</maxHistory> <!-- Conserver les 3 derniers fichiers -->
+            <!-- Garde les fichiers pendant 30 jours, puis les supprime -->
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+
+        <!-- Format de log -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- Loggers -->
+    <logger name="demo" level="INFO" />
+
+    <!-- Root logger -->
+    <root level="INFO">
+        <appender-ref ref="console" />
+        <appender-ref ref="rollingFile" />
+    </root>
+
+</configuration>

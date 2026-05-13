@@ -1,0 +1,213 @@
+@import "header.css";
+
+body{
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+
+    /*On a besoin de mettre le z-index de body à -5 car sinon il détecte mal lorsque qu'on passe au dessus d'un élément*/
+    position: relative;
+    z-index: -5;
+
+    /* ==================== PAGE D'ACCUEIL ==================== */
+    #liste_faculte{
+        position: relative;
+        top: 100px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 300px);
+        grid-auto-rows: 300px;
+        justify-content: center;
+        gap: 50px;
+    }
+    .faculte{
+        position: relative;
+        /* border: solid;   L'utilisation de bordure a posé des problèmes avec le placement internes des éléments de la grille
+        border-color: rgb(108, 108, 108); */
+        border-radius: 24px;
+        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -5px -5px 10px rgb(255, 255, 255);
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        z-index: 1;
+        grid-template-rows: 2fr 1fr;
+    }
+    .faculte .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 300px;
+        height: 300px;
+        z-index: 1;
+        grid-column: 1/3;
+        grid-row: 1/3;
+        border-radius: 24px;
+    }
+    .nom_faculte{
+        color: rgb(255, 255, 255);
+        background: rgba(0, 0, 0, 0.5);
+
+        font-size: larger;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+
+        grid-column: 1/3;
+        grid-row: 2/3;
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 21px;
+        border-bottom-right-radius: 21px;
+    }
+
+    /* ==================== PAGE DES FAVORIS ==================== */
+    #body_favoris{
+        position: relative;
+        top: 100px;
+        z-index: -1;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        padding: 1em;
+    }
+    .colonne_title{
+        font-size: 2em;
+    }
+
+    .colonne_favoris{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: -2;
+
+        gap: 1em;
+        border-radius: 15px;
+        padding: 1em;
+
+        text-align: center;
+
+        background-color: rgb(243, 243, 243);
+        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1) inset, -5px -5px 10px rgb(255, 255, 255) inset; /*Pour avoir une ombre et une source de lumière INTERNE*/
+    
+    }
+    
+    .synth_element{
+        position: relative;
+        border-radius: 15px;
+        padding: 1em;
+
+        text-align: start;
+
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -5px -5px 10px rgb(255, 255, 255); /*Pour avoir une ombre et une source de lumière (La troisième valeur sert pour le niveau de flou*/
+    }
+    /*Pour rajouter un cadre vert autour des synthèses quand on passe dessus*/
+    .synth_element:hover{
+        transition: all 0.2s ease;
+        outline: 4px solid rgb(43, 255, 0);
+        transform: translateY(-3px);
+    }
+
+    .class_element{
+        position: relative;
+        border-radius: 15px;
+        padding: 1em;
+
+        text-align: start;
+        font-size: 1.25em;
+
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -5px -5px 10px rgb(255, 255, 255); /*Pour avoir une ombre et une source de lumière (La troisième valeur sert pour le niveau de flou*/
+    }
+
+    /*Pour rajouter un cadre vert autour des synthèses quand on passe dessus*/
+    .class_element:hover{
+        transition: all 0.2s ease;
+        outline: 7px solid rgb(225, 0, 255);
+        transform: translateY(-3px);
+    }
+
+    /* ==================== PAGE DES FAVORIS ==================== */
+    #my_synth_body{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 100px;
+        z-index: -1;
+        margin: 5em;
+    }
+    .new_synth_button{
+        position: relative;
+
+        background: white;
+        width: max-content;
+        padding: 0.5em;
+        border-radius: 20px;
+        padding-left: 1em;
+        padding-right: 1em;
+
+        cursor: pointer;
+
+        font-size: 2em;
+    }
+    .new_synth_button::after{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        padding: 5px;
+        border-radius: 20px;
+        
+        background: linear-gradient(rgb(0, 247, 255), rgb(255, 0, 221));
+    }
+    .new_synth_button:hover{
+        background: linear-gradient(rgb(0, 247, 255), rgb(255, 0, 221));;
+        color: rgb(255, 255, 255);
+    }
+    #liste_mes_syntheses{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        position: relative;
+        top: 2em;
+    }
+    .titre_colonne_synth{
+        position: relative;
+        top: 0.5em;
+        
+        font-size: 2em;
+    }
+}
+
+
+/* ==================== POUR LES ELEMENTS GENERAUX ==================== */
+.smooth_policy{
+    font-family: nunitosans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+}
+
+.green_text{
+    color: rgb(0, 255, 0);
+}
+
+.white_text{
+    color: white;
+}
+
+.titre{
+    font-size: larger;
+}
+
+a { color: inherit; 
+    text-decoration: none;} /*Retirer la couleur bleue des liens hypertextes*/

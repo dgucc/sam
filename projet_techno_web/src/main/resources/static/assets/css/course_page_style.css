@@ -1,0 +1,138 @@
+@import "header.css";
+
+/* REPRISE DE TON CODE ORIGINAL */
+body {
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* MAIN */
+#my_synth_body {
+    margin: 120px 5em 5em 5em;
+}
+
+/* HEADER ROW */
+.course-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* BOUTON */
+.new_synth_button {
+    padding: 10px 15px;
+    background-color: rgb(15, 179, 15);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+
+.new_synth_button:hover {
+    background-color: rgb(10, 140, 10);
+}
+
+/* COLONNES */
+#liste_mes_syntheses {
+    display: flex;
+    flex-direction: column; 
+    gap: 2em;
+}
+
+.colonne_favoris {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 15px;
+    padding: 1.5em;
+    background-color: rgb(243, 243, 243);
+    box-shadow: inset 12px 12px 12px rgba(0, 0, 0, 0.1),
+                inset -5px -5px 10px rgb(255, 255, 255);
+}
+
+/* ELEMENT */
+.colonne_element {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border-radius: 15px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+                -5px -5px 10px rgb(255, 255, 255);
+
+    transition: all 0.2s ease;
+}
+
+.colonne_element:hover {
+    outline: 3px solid rgb(43, 255, 0);
+    transform: translateY(-3px);
+}
+
+/* DETAILS */
+.star {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.expand-arrow {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.header-with-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-box {
+    font-size: 0.6em;
+    border: 1px solid black;
+    padding: 2px 5px;
+    background: white;
+}
+
+.dots {
+    margin-left: 50px;
+    color: #999;
+    letter-spacing: 2px;
+}
+
+/* TYPO */
+.smooth_policy {
+    font-family: nunitosans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.white_text {
+    color: white;
+}
+
+.titre {
+    font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#buttons_list{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

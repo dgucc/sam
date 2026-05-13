@@ -1,0 +1,47 @@
+/* ==================== POUR LES ELEMENTS DU BANDEAU SUPERIEUR ==================== */
+    header{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    #bandeau_principal{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        padding: 20px;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+
+        background-color: rgb(15, 179, 15);
+        border: solid;
+        border-radius: 4px;
+        border-color: rgb(15, 179, 15);
+
+    }
+    #top_right_set{
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        z-index: 11;
+    }
+    .icones{
+        width: 50px;
+        height: 50px; 
+    }
+    .logo{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100px;
+        height: 100px;
+        z-index: 11;
+    }
+    .white_text{
+    color: white;
+    }

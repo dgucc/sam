@@ -1,0 +1,157 @@
+@import "header.css";
+
+/* REPRISE DU STYLE EXISTANT */
+body {
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* MAIN */
+#synthese_body {
+    margin: 120px 5em 5em 5em;
+}
+
+/* EN-TÊTE */
+.synthese-header {
+    margin-bottom: 1.2em;
+}
+
+.titre { font-size: 2em; margin: 0 0 0.2em 0; }
+
+.meta { font-size: 0.85em; color: #555; }
+
+/* BLOC DOCUMENT */
+.doc-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    padding: 1em 1.5em;
+    margin-bottom: 1.5em;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.08);
+}
+
+#infos_synthese{
+    display: flex;
+    flex-direction: row;
+}
+
+/* BOUTON */
+.btn-green {
+    padding: 8px 14px;
+    background-color: rgb(15, 179, 15);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+}
+
+.btn-green:hover { background-color: rgb(10, 140, 10); }
+
+.btn-delete {
+    padding: 8px 14px;
+    background-color: rgb(179, 15, 15);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+}
+
+.btn-delete:hover { background-color: rgb(140, 10, 10); }
+
+
+/* COMMENTAIRES */
+.section-titre {
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
+}
+
+.commentaires {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.commentaire {
+    background: white;
+    border-radius: 10px;
+    padding: 0.9em 1.2em;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.reponse {
+    margin-left: 2em;
+    border-left: 3px solid rgb(15, 179, 15);
+    border-radius: 0 10px 10px 0;
+    background: rgb(243, 243, 243);
+    box-shadow: none;
+}
+
+.com-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85em;
+}
+
+.com-auteur { color: rgb(10, 140, 10); }
+.auteur-tag { color: #aaa; font-weight: normal; }
+.com-date   { color: #aaa; }
+
+.com-texte {
+    font-family: nunitosans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.com-actions {
+    display: flex;
+    gap: 1em;
+    font-size: 0.8em;
+    color: #999;
+}
+
+.com-actions span { cursor: pointer; }
+.com-actions span:hover { color: rgb(15, 179, 15); }
+
+/* FORMULAIRE */
+.nouveau-com {
+    background: white;
+    border-radius: 10px;
+    padding: 1em 1.2em;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.07);
+}
+
+.com-textarea {
+    width: 100%;
+    min-height: 75px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.6em;
+    font-family: nunitosans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    resize: vertical;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.com-textarea:focus { border-color: rgb(15, 179, 15); }
+
+/* TYPO */
+.smooth_policy {
+    font-family: nunitosans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.white_text { color: white; }
+
+a { text-decoration: none; color: inherit; }

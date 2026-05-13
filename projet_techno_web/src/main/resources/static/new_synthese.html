@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Nouvelle Synthèse</title>
+    <link rel="stylesheet" href="assets/css/new_synthese_style.css">
+</head>
+
+<body>
+
+<header>
+    <div id="bandeau_principal" class="smooth_policy white_text">
+        <a href="home_page.html">Tous les cours</a>
+        |
+        <a href="favorite_page.html">Mes favoris</a>
+        |
+        <a href="my_synth_page.html">Mes synthèses</a>
+    </div>
+
+    <img class="logo" src="assets/images/unamur.ICO" alt="logo_unamur"/>
+
+    <!-- <div id="top_right_set">
+        <img class="icones" src="assets/images/notif_bell.png"/>
+        <img class="icones" src="assets/images/pfp.png"/>
+    </div> -->
+</header>
+
+<main id="my_synth_body">
+
+    <div class="form-container">
+
+        <h1 class="smooth_policy titre">Nouvelle synthèse</h1>
+
+        <div class="submission-form" method="post" action="#">
+
+            <div class="form-group">
+                <label class="smooth_policy">Cours</label>
+                <select class="form-input" id="class_list">
+                    <option>sélectionner (seul les cours en favoris sont affichés ici)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="smooth_policy">Titre</label>
+                <textarea type="text" class="form-input" placeholder="Titre" id="titre_synth"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="smooth_policy">URL</label>
+                <textarea type="text" class="form-input" placeholder="Lien" id="lien_synth"></textarea>
+            </div>
+
+            <button class="new_synth_button" id="submit_synth_button">Soumettre</button>
+
+        </div>
+
+    </div>
+
+</main>
+    <script src="assets/js/new_synthese.js"></script>
+    </body>
+</html>

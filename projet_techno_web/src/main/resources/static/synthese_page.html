@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Synthèse - Usynth</title>
+    <link rel="stylesheet" href="assets/css/synthese_page_style.css">
+</head>
+<body>
+
+<header>
+    <div id="bandeau_principal" class="smooth_policy white_text">
+        <a href="home_page.html">Tous les cours</a>
+        |
+        <a href="favorite_page.html">Mes favoris</a>
+        |
+        <a href="my_synth_page.html">Mes synthèses</a>
+    </div>
+    <img class="logo" src="assets/images/unamur.ICO" alt="logo_unamur"/>
+    <div id="top_right_set">
+        <img class="icones" src="assets/images/notif_bell.png" alt="notif_bell"/>
+        <img class="icones" src="assets/images/pfp.png" alt="PP"/>
+    </div>
+</header>
+
+<main id="synthese_body">
+
+    <div class="synthese-header">
+        <h1 class="smooth_policy titre" id="titre_synthese"></h1>
+        <div class="meta smooth_policy" id="infos_synthese">
+            Publié par : &nbsp<strong id="auteur_nom"></strong> &nbsp(<div id="auteur_email"></div>) · &nbsp<div id="nom_cours"></div>
+        </div>
+    </div>
+
+    <div class="doc-block smooth_policy" id="button_block">
+        <a class="btn-green smooth_policy" id="synth_url">↗ Ouvrir</a> <!-- Le href sera rajouté par le js -->
+        <button class="btn-green smooth_policy" id="favorite_button"></button>
+        <!-- <button class="btn-delete smooth_policy" id="delete_button"></button> Le js ajoutera lui-même le bouton pour supprimer la synthèse-->
+    </div>
+
+    <div class="smooth_policy section-titre">Commentaires</div>
+
+    <div class="commentaires">
+        <div id="liste_commentaires"></div>
+
+        <div class="nouveau-com">
+            <div class="smooth_policy" style="margin-bottom:0.5em;">✏️ Laisser un commentaire</div>
+            <textarea class="com-textarea" placeholder="Votre commentaire..." id="comment_content"></textarea>
+            <div style="text-align:right; margin-top:0.5em;">
+                <button class="btn-green smooth_policy" id="post_comment">Publier</button>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="assets/js/synthese_page_v2.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@import "header.css";
+
+body{
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+
+    /*On a besoin de mettre le z-index de body à -5 car sinon il détecte mal lorsque qu'on passe au dessus d'un élément*/
+    position: relative;
+    top: 5em;
+    padding: 5em;
+    z-index: -5;
+
+    #faculte_name{
+        font-size: 3em;
+        padding: 0.5em;
+    }
+
+    .colonne_faculte{
+        display: flex;
+        flex-direction: column;
+        z-index: -2;
+
+        gap: 1em;
+        border-radius: 15px;
+        padding: 1em;
+
+        background-color: rgb(243, 243, 243);
+        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1) inset, -5px -5px 10px rgb(255, 255, 255) inset; /*Pour avoir une ombre et une source de lumière INTERNE*/
+    }
+
+    .class_element{
+        position: relative;
+        border-radius: 15px;
+        padding: 1em;
+
+        text-align: start;
+        font-size: 1.25em;
+
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -5px -5px 10px rgb(255, 255, 255); /*Pour avoir une ombre et une source de lumière (La troisième valeur sert pour le niveau de flou*/
+    }
+
+    /*Pour rajouter un cadre vert autour des synthèses quand on passe dessus*/
+    .class_element:hover{
+        transition: all 0.2s ease;
+        outline: 7px solid rgb(225, 0, 255);
+        transform: translateY(-3px);
+    }
+
+    /* BOUTON */
+    .btn-green {
+        position: relative;
+        margin-right: 1em;
+        min-width: 5%;
+
+        padding: 8px 14px;
+        background-color: rgb(15, 179, 15);
+        color: white;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn-green:hover { background-color: rgb(10, 140, 10); }
+
+    .cours_block{
+        display: flex;
+        flex-direction: row;
+        min-width: fit-content;
+        a{
+            min-width: 90%;
+        }
+    }
+}
+
+/* ==================== POUR LES ELEMENTS GENERAUX ==================== */
+.smooth_policy{
+    font-family: nunitosans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+}
+
+a { color: inherit; 
+    text-decoration: none;} /*Retirer la couleur bleue des liens hypertextes*/

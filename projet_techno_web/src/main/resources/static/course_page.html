@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Détails du Cours - Usynth</title>
+    <link rel="stylesheet" href="assets/css/course_page_style.css">
+</head>
+
+<body id="body_favoris">
+
+<header>
+    <div id="bandeau_principal" class="smooth_policy white_text">
+        <a href="home_page.html">Tous les cours</a>
+        |
+        <a href="favorite_page.html">Mes favoris</a>
+        |
+        <a href="my_synth_page.html">Mes synthèses</a>
+    </div>
+
+    <img class="logo" src="assets/images/unamur.ICO" alt="logo_unamur"/>
+<!-- 
+    <div id="top_right_set">
+        <img class="icones" src="assets/images/notif_bell.png" alt="notif_bell"/>
+        <img class="icones" src="assets/images/pfp.png" alt="PP"/>
+    </div> -->
+</header>
+
+<main id="my_synth_body">
+
+    <div class="course-header-row">
+        <h1 class="smooth_policy titre"></h1>
+
+        <div id="buttons_list">
+            <a href="new_synthse.html" class="new_synth_button smooth_policy">
+            + nouvelle synthèse
+            </a>
+        </div>
+        
+    </div>
+
+    <div id="liste_mes_syntheses">
+
+        <!-- FAVORIS -->
+        <div class="colonne_favoris">
+            <div class="titre_colonne_synth smooth_policy">
+                 Favoris
+            </div>
+            <div id="liste-favoris"></div>
+            
+        </div>
+
+        <!-- TOUTES -->
+        <div class="colonne_favoris" id="liste-toutes">
+            <div class="titre_colonne_synth smooth_policy header-with-filter">
+                <span>Toutes</span>
+            </div>
+            
+        </div>
+        <!-- <div id="liste-toutes"></div> -->
+    </div>
+
+</main>
+
+<script src="assets/js/course_page.js"></script>
+
+</body>
+</html>
