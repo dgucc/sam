@@ -1,0 +1,18 @@
+<build>
+    <plugins>
+      <plugin>
+        <groupId>org.hibernate.tool</groupId>
+        <artifactId>hibernate-tools-maven-plugin</artifactId>
+        <version>${hibernate-core.version}</version>
+        <executions>
+          <execution>
+            <id>hbm2java</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>hbm2java</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>

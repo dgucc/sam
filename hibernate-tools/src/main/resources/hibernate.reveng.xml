@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<!-- Mapping database type to java type -->
+	<type-mapping>
+		<sql-type jdbc-type="VARCHAR" length="1" hibernate-type="char" not-null="true" />
+		<sql-type jdbc-type="VARCHAR" length="1" not-null="true" hibernate-type="java.lang.Character" />
+	</type-mapping>
+
+	<!-- We want all tables in a specific package -->
+	<table-filter match-catalog="PUBLIC" match-schema="PUBLIC" match-name=".*" package="com.example.demo" />
+
+	
+</hibernate-reverse-engineering>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.bar</groupId>
+    <artifactId>foo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <hibernate.version>7.3.0.Final</hibernate.version>
+    </properties>
+
+    <dependencies>
+        <!-- HSQLDB -->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.7.3</version>
+		</dependency>
+        <!-- DB2 -->
+        <dependency>
+            <groupId>com.ibm.db2.jcc</groupId>
+            <artifactId>db2jcc</artifactId>
+            <version>db2jcc4</version>
+        </dependency>
+         <!-- MySQL -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.5.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+    <plugins>
+      <plugin>
+        <groupId>org.hibernate.tool</groupId>
+        <artifactId>hibernate-tools-maven</artifactId>
+        <version>${hibernate.version}</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.hibernate.tool</groupId>
+            <artifactId>hibernate-tools-orm</artifactId>
+            <version>${hibernate.version}</version>
+          </dependency>
+          <!-- hsqldb -->
+          <dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.7.3</version>
+		</dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <id>entity-generation</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>hbm2java</goal>
+            </goals>
+            <configuration>
+              <ejb3>true</ejb3>
+              <jdk5>true</jdk5>
+              <revengFile>src/main/resources/hibernate.reveng.xml</revengFile>
+              <!-- <outputDirectory>reveng</outputDirectory> -->
+              <!-- <templatePath>${project.basedir}/src/main/resources/templates/</templatePath> -->
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+
+
+</project>

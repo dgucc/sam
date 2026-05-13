@@ -1,0 +1,51 @@
+
+run-hsqldb.cmd :  
+```cmd
+@echo off
+REM set these variables 
+SET HSQLDB_HOME=.
+SET DB_NAME=calcisoc
+
+REM start the server in new window ( prompt visible, so that you can CTRL+C )
+REM database files are created in current directory/data
+start java -cp hsqldb-2.7.4.jar org.hsqldb.server.Server --database.0 file:data/%DB_NAME% --dbname.0 %DB_NAME%
+start java -cp hsqldb-2.7.4.jar org.hsqldb.server.Server --database.0 file:data/calcisoc --dbname.0 calcisoc
+
+REM start the client GUI and connect to server ( no new cmd window opens because of javaw )
+start javaw -cp hsqldb-2.7.4.jar org.hsqldb.util.DatabaseManagerSwing --url jdbc:hsqldb:hsql://localhost/%DB_NAME%
+```
+
+
+jdbc:hsqldb:file:hsqldb/data/calcisoc
+
+
+
+SQL  
+
+```SQL
+WITH Transposed AS (
+    SELECT
+           N_I_ANNEE, C_I_TYPE, N_I_YEAR_BILAN, N_I_MONTH_BILAN,
+           CASE 
+               WHEN D_I_DATE_VA1 IS NOT NULL THEN 'DATE_VA1'
+               WHEN D_I_DATE_VA2 IS NOT NULL THEN 'DATE_VA2'
+               WHEN D_I_DATE_VA3 IS NOT NULL THEN 'DATE_VA3'
+               WHEN D_I_DATE_VA4 IS NOT NULL THEN 'DATE_VA4'
+           END AS VA_TYPE,
+           CASE 
+               WHEN D_I_DATE_VA1 IS NOT NULL THEN D_I_DATE_VA1
+               WHEN D_I_DATE_VA2 IS NOT NULL THEN D_I_DATE_VA2
+               WHEN D_I_DATE_VA3 IS NOT NULL THEN D_I_DATE_VA3
+               WHEN D_I_DATE_VA4 IS NOT NULL THEN D_I_DATE_VA4
+           END AS VA_DATE
+    FROM VA_PERIOD
+)
+SELECT N_I_ANNEE, C_I_TYPE, N_I_YEAR_BILAN, N_I_MONTH_BILAN,VA_TYPE, TO_CHAR(VA_DATE, 'yyyy-MM-dd') AS VA_DATE
+FROM Transposed
+WHERE 
+N_I_ANNEE = 2025
+AND C_I_TYPE = 'NORM'
+AND N_I_YEAR_BILAN = 2024
+AND N_I_MONTH_BILAN= 12
+;
+```
